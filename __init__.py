@@ -2,7 +2,7 @@ import os
 from driveami.reduce import ensure_dir
 
 
-ami_rootdir = '/data2/ami'
+ami_rootdir = os.environ.get('AMI_DIR', os.path.expanduser('~/ami'))
 driveami_testdir = '/tmp/driveami-test'
 _test_data_dir = os.path.dirname(__file__)
 _symlink_target = '/tmp/driveami-test/LA'
